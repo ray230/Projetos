@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/fonts.css" />
     <title>Achados da Shopee</title>
+
     <script type="text/javascript">
       const emailSend = () => {
         let userName = document.getElementById("name").value;
         let email = document.getElementById("email").value;
         
-        let messageBody = "Name " + userName + "<br/> Email " + email;
+        let messageBody = "Nome: " + userName + "<br/> Email: " + email;
 
         Email.send({
           Host: "smtp.elasticemail.com",
@@ -19,7 +20,7 @@
           Password: "60EE62DC53621EF7E9B1BF05FC36105E1ECC",
           To: "rayssaemanufarias@gmail.com",
           From: "rayssaemanufarias@gmail.com",
-          Subject: "Oieeeeeeeeeeeeee",
+          Subject: "Quero receber os achados!",
           Body: messageBody,
         }).then((message) => {
           if (message == "OK") {
@@ -30,6 +31,7 @@
         });
       };
     </script>
+    
   </head>
   <body>
     <header>
