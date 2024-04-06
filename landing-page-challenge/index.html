@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <title>Achados da Shopee</title>
+    <script type="text/javascript">
+      const emailSend = () => {
+        let userName = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        
+        let messageBody = "Name " + userName + "<br/> Email " + email;
+
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "rayssaemanufarias@gmail.com",
+          Password: "60EE62DC53621EF7E9B1BF05FC36105E1ECC",
+          To: "rayssaemanufarias@gmail.com",
+          From: "rayssaemanufarias@gmail.com",
+          Subject: "Oieeeeeeeeeeeeee",
+          Body: messageBody,
+        }).then((message) => {
+          if (message == "OK") {
+            swal("Sucesso", "Seu email foi enviado!", "success");
+          } else {
+            swal("Erro", "Ops... ocorreu um erro!", "error");
+          }
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="title">
+        <h1>Achadinhos</h1>
+        <h1>da Shopee</h1>
+      </div>
+
+      <div id="navigation-bar" class="nav-bar">
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+        <a href="#" id="account">Já tem uma conta?</a>
+      </div>
+    </header>
+
+    <main>
+      <aside>
+        <div class="news-title">
+          <h2>Receba agora</h2>
+          <h2>todas as <span>novidades</span></h2>
+        </div>
+
+        <p>
+          Quer economizar nas compras online? Vem comigo que eu te mostro os
+          melhores achadinhos da Shopee de forma fácil, tendo acesso em primeira
+          mão à todas as novidades que estão super em alta no ano de 2024.
+          Inscreva-se abaixo que irá receber tudo rapidinho!
+        </p>
+
+        <form onsubmit="emailSend(); reset(); return false">
+          <input type="text" name="name" id="name" placeholder="Nome" />
+          <input type="email" name="email" id="email" placeholder="E-mail" />
+          <input type="submit" value="Quero receber!" />
+        </form>
+      </aside>
+
+      <article>
+        <img
+          src="./components/images/shopping-bags-on-the-shopping-cart-online-shopping-ideas.png"
+          alt="shopping"
+        />
+      </article>
+
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+    </main>
+  </body>
+</html>
