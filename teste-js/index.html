@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste de JavaScript</title>
+  </head>
+  <body>
+    <script>
+      // Cole aqui o código JavaScript
+      function lerTresNumeros() {
+        let numeros = [];
+        for (let i = 1; i <= 3; i++) {
+          numeros.push(parseInt(prompt("Digite o " + i + "º número inteiro:")));
+        }
+        return numeros;
+      }
+
+      function determinarMenorNumero(numeros) {
+        return Math.min(...numeros);
+      }
+
+      function mostrarMenorNumero(menor) {
+        alert("O menor número é: " + menor);
+      }
+
+      function main() {
+        let numeros = lerTresNumeros();
+        let menor = determinarMenorNumero(numeros);
+        mostrarMenorNumero(menor);
+      }
+
+      main();
+
+      function verificarSituacao(nota, faltas) {
+        if (nota < 5) {
+          console.log("Reprovado");
+        } else {
+          if (faltas > 14) {
+            if (nota >= 7) {
+              console.log("Aprovado");
+            } else {
+              console.log("Reprovado");
+            }
+          } else {
+            console.log("Aprovado");
+          }
+        }
+      }
+
+      // Exemplo de uso da função
+      verificarSituacao(7, 16);
+    </script>
+  </body>
+</html>
