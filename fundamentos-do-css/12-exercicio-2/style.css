@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 2rem;
+  padding: 2rem;
+}
+
+li {
+  background-color: #1c1a1d;
+  color: #fff;
+  border: 0.25rem solid transparent;
+  border-radius: 0.25rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  padding: 2rem;
+  display: inline-block;
+  height: 15.625rem;
+  width: 25rem;
+  cursor: pointer;
+}
+
+.selected {
+    border: 0.25rem solid #0088d8;
+    background-color: #363338;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,87 @@
+* {
+  font-family: "Fira Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  border-bottom: 1px solid #000000;
+  text-align: center;
+  font-size: 1.125rem;
+  padding: 2rem 0;
+}
+
+h1,
+h2 {
+  font-family: "Lora", serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.feature,
+.catalog,
+.cta {
+  font-size: 1.125rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cta-button {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #000000;
+  color: #fff;
+  font-weight: 700;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  border-radius: 9999px;
+  display: block;
+}
+
+.genres > li {
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.genres > li + li {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.genre > a,
+.see-more > a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #43abf6;
+  border-radius: 9999px;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+}
+
+.see-more > a {
+  background-color: #030308;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+footer {
+  background-color: #030308;
+  color: #fff;
+  font-family: "Lora", serif;
+  padding: 2rem;
+  text-align: center;
+}
